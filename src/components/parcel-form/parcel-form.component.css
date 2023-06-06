@@ -13,13 +13,3 @@
     display: flex;
     flex-direction: column;
 }
-
-
-
-.success-snackbar {
-    background-color: green;
-}
-
-.failure-snackbar {
-    background-color: red;
-}
