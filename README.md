@@ -11,6 +11,10 @@ To run the app make sure you have the following installed:
 - Angular CLI
 - The backend service for parcels running on port 3000. see [https://github.com/FouMez/shipping-backend](https://github.com/FouMez/shipping-backend)
 
+## Installing packages
+
+After clonning the project, run `npm install` or `yarn` to install the packages.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
