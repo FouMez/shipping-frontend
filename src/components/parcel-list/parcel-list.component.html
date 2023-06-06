@@ -1,0 +1,57 @@
+  <a mat-flat-button href="/create">&lt; Go to create parcel form</a>
+
+
+<div>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title ngClass="title">Parcel List</mat-card-title>
+    </mat-card-header>
+    <mat-card-content ngClass="content">
+      <mat-form-field>
+        <mat-label ngClass="filter-label">Country Filter</mat-label>
+        <input matInput [formControl]="countryFilterControl">
+      </mat-form-field>
+  
+      <mat-form-field>
+        <mat-label ngClass="filter-label">Description Filter</mat-label>
+        <input matInput [formControl]="descriptionFilterControl">
+      </mat-form-field>
+
+      <button ngClass="filter-button" mat-flat-button color="primary" (click)="onSearch()">Search</button>
+      
+      <mat-spinner *ngIf="isLoading"></mat-spinner>
+
+      <mat-table *ngIf="!isLoading" [dataSource]="parcels" class="mat-elevation-z8">
+        <ng-container matColumnDef="sku">
+          <mat-header-cell *matHeaderCellDef>SKU</mat-header-cell>
+          <mat-cell *matCellDef="let parcel">{{ parcel.sku }}</mat-cell>
+        </ng-container>
+  
+        <ng-container matColumnDef="description">
+          <mat-header-cell *matHeaderCellDef>Description</mat-header-cell>
+          <mat-cell *matCellDef="let parcel">{{ parcel.description }}</mat-cell>
+        </ng-container>
+  
+        <ng-container matColumnDef="address">
+          <mat-header-cell *matHeaderCellDef>Address</mat-header-cell>
+          <mat-cell *matCellDef="let parcel">{{ parcel.streetAddress }}</mat-cell>
+        </ng-container>
+  
+        <ng-container matColumnDef="country">
+          <mat-header-cell *matHeaderCellDef>Country</mat-header-cell>
+          <mat-cell *matCellDef="let parcel">{{ parcel.country }}</mat-cell>
+        </ng-container>
+  
+        <ng-container matColumnDef="deliveryDate">
+          <mat-header-cell *matHeaderCellDef>Delivery Date</mat-header-cell>
+          <mat-cell *matCellDef="let parcel">{{ parcel.deliveryDate | date }}</mat-cell>
+        </ng-container>
+  
+        <mat-header-row *matHeaderRowDef="['sku', 'description', 'address', 'country', 'deliveryDate']"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: ['sku', 'description', 'address', 'country', 'deliveryDate']"></mat-row>
+      </mat-table>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+  

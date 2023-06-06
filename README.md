@@ -1,6 +1,15 @@
-# ShippingFrontend
+# Shipping Frontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.4.
+
+## Requirements
+
+To run the app make sure you have the following installed:
+
+- Node.js (v14 or higher)
+- npm (v6 or higher)
+- Angular CLI
+- The backend service for parcels running on port 3000. see [https://github.com/FouMez/shipping-backend](https://github.com/FouMez/shipping-backend)
 
 ## Development server
 

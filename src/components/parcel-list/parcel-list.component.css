@@ -1,0 +1,15 @@
+.title {
+    text-align: center;
+}
+
+.content {
+    margin-top: 1rem;
+}
+
+.filter-label {
+    font-size: 12px;
+}
+
+.filter-button {
+    margin-left: 1rem;
+}
